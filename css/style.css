@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    list-style: none;
+    transition: all 200ms;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+
+header{
+    width: 100%;
+}
+
+.contenidoNav{
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.logo a{
+    position: absolute;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.logo a img{
+    height: 60%;
+}
+
+.menu{
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu nav {
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.menu nav ul li a{
+  color: black;
+  position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    margin-top: 1.4rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3C3EF2 ;
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
+/* Portada */
+
+.portada{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.contenidoPortada{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedorTextoPortada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedorTextoPortada h1{
+    font-weight: 800;
+    
+}
+
+.contenedorTextoPortada h2{
+    font-weight: 800;
+}
+
+.contenedorTextoPortada a{
+    margin-top: 20px;
+    background-color: #3C3EF2;
+    padding: 15px 60px;
+    border-radius: 20px;
+    color: white;
+}
+
+.contenedorImagenPortada{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagenPortada{
+    width: 100%;  
+    height: 100%; 
+    background-color:#FFE01B;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.imagenPortada img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: white 10px solid;
+}
+
+/* Body */
+
+.contenedorBody{
+    width: 100%;
+    margin: auto;
+    margin-top: 140px;
+}
+
+.sobreNosotros{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3C3EF2;
+}
+
+.contenidoSobreNosotros{
+    width: 70%;
+    padding-bottom: 300px;
+}
+
+.sobreNosotros h1{
+    background-color: #FFE01B;
+    padding: 30px 40px;
+    border-radius: 20px;
+    transform: translatey(-70%);
+}
+
+.mision, .vision{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenidoSobreNosotros p{
+    width: 55%;
+    color: #000000;
+    background-color: #FFE01B;
+    padding: 50px;
+    margin: 40px 0px;
+    border-radius: 20px;
+}
+
+.contenidoSobreNosotros h2{
+    margin: auto;
+    color: #ffffff;
+}
+
+.contenidoInformacion{
+    width: 50%;
+    margin: auto;
+    height: fit-content;
+    transform: translateY(-200px);
+}
+
+.contenidoInformacion img{    
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.contenidoInformacion p{
+    margin: 20px 0px;
+    text-align: center;
+}
+
+/* Slider Marcas*/
+
+.marcas{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.marcas h1{
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contenedorSlider{
+    position: relative;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    background-color: #d6d6d6;
+}
+
+.slide img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.sliderAnterior, .slideSiguiente{
+    background: none;
+    border: none;
+    margin: auto;
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: calc(50% - 20px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    z-index: 3;
+}
+
+.sliderAnterior{
+    left: -30px;
+}
+
+.slideSiguiente{
+    right: -30px;
+}
+
+.slideSiguiente img{
+    transform: scaleX(-1);
+}
+
+.sliderAnterior img, .slideSiguiente img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer{
+    width: 100%;
+    background-color: #3C3EF2;
+    color: white;
+}
+
+.contenidoFooter{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+.contenidoFooter h3{
+    padding: 30px;
+}
+
+.enlacesFooter a{
+    color: white;
+    padding: 0px 10px;
+}
+
+hr{
+    width: 100%;
+    margin: 40px 0px;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.redesFooter{
+    display: flex;
+    flex-direction: row;
+}
+
+.redesFooter a{
+    background-color: #ffffff69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.redesFooter a img{
+    width: 1rem;
+    height: 1rem;
+    filter: invert();
+}
+
+.instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+}
+
+
+.twitter:hover{
+    background-color: #1DA1F2;
+}
+
+.internet:hover{
+    background-color: #FFE01B;
+}
+
+.youtube:hover{
+    background-color: #c4302b;
+}
+
+/* Footer */
+
+@media screen and (max-width: 1220px){
+    .contenidoPortada, .contenidoSobreNosotros, .marcas, .contenidoFooter, .contenidoInformacion{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    
+    .sobreNosotros h1{
+        max-width: 70%;
+        text-align: center;
+    }
+    .contenidoPortada{
+        flex-direction: column-reverse;
+    }
+    .contenedorTextoPortada{
+        margin: 30px 0px;
+    }
+    .contenedorImagenPortada{
+        width: 80%;
+    }
+    .contenidoNav .logo{
+        display: none;
+    }
+    .mision{
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .vision{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contenidoSobreNosotros p{
+        width: 100%;
+    }
+    .contenidoInformacion p{
+        text-align: justify;
+    }
+    .enlacesFooter{
+        justify-content: center;
+    }
+    .sliderAnterior, .slideSiguiente{
+        display: none;
+    }
+}
