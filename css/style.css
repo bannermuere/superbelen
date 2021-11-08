@@ -65,6 +65,12 @@ header{
   position: relative;
 }
 
+.menu nav ul li a img{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: none;
+}
+
 .menu a::before {
     content: '';
     position: absolute;
@@ -137,7 +143,7 @@ header{
     width: 100%;  
     height: 100%; 
     background-color:#FFE01B;
-    padding: 40px;
+    padding: 30px;
     border-radius: 30px;
 }
 
@@ -307,6 +313,7 @@ footer{
 .enlacesFooter a{
     color: white;
     padding: 0px 10px;
+    margin-top: 5px;
 }
 
 hr{
@@ -399,9 +406,29 @@ section{
         text-align: justify;
     }
     .enlacesFooter{
+        display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
     .sliderAnterior, .slideSiguiente{
         display: none;
+    }
+    .menu nav ul li a p{
+        display: none;
+    }
+    .menu nav ul li a img{
+        display: block;
+    }
+    .imagenPortada{
+        padding: 20px;
+    }
+    section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .redesFooter{
+        margin-top: 10px;
     }
 }
